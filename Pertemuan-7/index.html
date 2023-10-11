@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 3% 8%;
+    }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #7f940b;
+    }
+
+    .hidden-row {
+      display: none;
+      background-color: #ddd;
+    }
+
+    .image-preview {
+      display: flex;
+      gap: 10px;
+      justify-content: space-evenly;
+    }
+
+    .image-preview img {
+      border-radius: 15px;
+    }
+
+    .image-preview img:hover {
+      transition: all ease-in-out;
+      transform: scale(1.1);
+    }
+
+    .copyright {
+      text-align: right;
+      margin-top: 5%;
+    }
+
+    .copyright a {
+      text-decoration: none;
+    }
+  </style>
+
+  <title>Objek Wisata Indonesia</title>
+</head>
+<body>
+    <h1>Objek Wisata Indonesia</h1>
+    <p class="image-preview">
+        <img src="gambar 1.jpg" width="500">
+    </p>
+
+    <table>
+        <tr>
+          <th>Nama Objek Wisata</th>
+          <th>Lokasi</th>
+          <th>Deskripsi</th>
+          <th colspan="2">Aksi</th>
+        </tr>
+
+        <tr class="show-details">
+          <td>Pulau Komodo</td>
+          <td>Nusa Tenggara Timur</td>
+          <td>Pulau Komodo termasuk dalam kawasan Taman Nasional Komodo bersama pulau-pulau lain disekitar Kepulauan Nusa Tenggara.</td>
+          <td><button onclick="showDetails('PulauKomodoDetails')">Lihat</button></td>
+          <td><button onclick="hideDetails('PulauKomodoDetails')">Tutup</button></td>
+        </tr>
+
+        <tr class="hidden-row" id="PulauKomodoDetails">
+          <td colspan="6">
+              <strong>Detail Pulau Komodo:</strong><br>
+
+              <p>Pada tahun 1910 orang Belanda menamai pulau di sisi selatan Provinsi Nusa Tenggara Timur ini dengan julukan Pulau Komodo. Cerita ini berawal dari Letnan Steyn van Hens Broek yang mencoba membuktikan laporan pasukan Belanda tentang adanya hewan besar menyerupai naga di pulau tersebut. Steyn lantas membunuh seekor komodo tersebut dan membawa dokumentasinya ke Museum and Botanical Garden di Bogor untuk diteliti.
+
+                Tahun 2009, Taman Nasional Komodo dinobatkan menjadi finalis "New Seven Wonders of Nature" yang baru diumumkan pada tahun 2010 melalui voting secara online di www.N7W.com.Pada tanggal 11 November 2011, New 7 Wonders telah mengumumkan pemenang sementara, dan Taman Nasional Komodo masuk kedalam jajaran pemenang tersebut bersama dengan, Hutan Amazon, Teluk Halong, Air Terjun Iguazu, Pulau Jeju, Sungai Bawah Tanah Puerto Princesa, dan Table Mountain. Taman Nasional Komodo mendapatkan suara terbanyak. </p> 
+
+              <p class="image-preview">
+                <img src="gambar 2.jpeg" width="250" />
+                <img src="gambar 3.jpeg" width="250" />
+                <img src="gambar 4.jpeg" width="250" />
+                <img src="gambar 5.jpeg" width="250" />
+              </p>
+              
+              <p>Pulau Komodo adalah sebuah pulau yang terletak di Kepulauan Nusa Tenggara, berada di sebelah timur Pulau Sumbawa, yang dipisahkan oleh Selat Sape. Pulau Komodo dikenal sebagai habitat asli hewan komodo.
+
+                Pulau ini termasuk salah satu kawasan Taman Nasional Komodo yang dikelola oleh Pemerintah Pusat.
+                
+                Secara administratif, pulau ini termasuk wilayah Kabupaten Manggarai Barat, Kecamatan Komodo, Provinsi Nusa Tenggara Timur, Indonesia. Pulau Komodo merupakan ujung paling barat Provinsi Nusa Tenggara Timur, berbatasan dengan Provinsi Nusa Tenggara Barat.</p>
+
+              <p>Di Pulau Komodo, hewan komodo hidup dan berkembang biak dengan baik. Hingga Agustus 2009, di pulau ini terdapat sekitar 1300 ekor komodo. Ditambah dengan pulau lain, seperti Pulau Rinca dan dan Gili Motang, jumlah mereka keseluruhan mencapai sekitar 2500 ekor. Ada pula sekitar 100 ekor komodo di Cagar Alam Wae Wuul di daratan Pulau Flores tapi tidak termasuk wilayah Taman Nasional Komodo.
+
+                Selain komodo, pulau ini juga menyimpan eksotisme flora yang beragam kayu sepang yang oleh warga sekitar digunakan sebagi obat dan bahan pewarna pakaian, pohon nitak ini atau sterculia oblongata di yakini berguna sebagai obat dan bijinya gurih dan enak seperti kacang polong.</p>
+
+              <button onclick="hideDetails('PulauKomodoDetails')">Tutup</button>
+          </td>
+        </tr>
+    </table>
+
+    <p class="copyright">Copy &copy; 2023 <a>Muhammad Rifkan</a>. All rights reserved</p>
+
+    <script>
+      function showDetails(id) {
+        document.getElementById(id).style.display = 'table-row';
+      }
+
+      function hideDetails(id) {
+        document.getElementById(id).style.display = 'none';
+      }
+    </script>
+</body>
+</html>
